@@ -4,7 +4,7 @@ public class Conditional {
         System.out.println("Hello World!");
     }
 
-private static String i = "3" 
+private static int i = 3; 
 {
 if (i > 0) {
 	System.out.println("Positive");
@@ -17,5 +17,24 @@ else {
 }
 
 	}
+switch (i) {
+	case 1:
+	System.out.println("One");
+	break; 
+	
+	case 2:
+	System.out.println("Two");
+	break;
+	
+	case 3: 
+	System.out.println("Three");
+	break;
+	
+	default: 
+	System.out.println("Invalid");
+	break;
+}
+
+
 
 }
