@@ -1,0 +1,21 @@
+public class Conditional {
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+
+private static String i = "3" 
+{
+if (i > 0) {
+	System.out.println("Positive");
+	}
+else if (i<0) {
+	System.out.println("Negative");
+	}
+else {
+	System.out.println("0");
+}
+
+	}
+
+}
