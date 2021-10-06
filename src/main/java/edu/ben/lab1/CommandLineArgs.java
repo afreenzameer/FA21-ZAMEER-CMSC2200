@@ -1,3 +1,5 @@
+package edu.ben.lab1;
+
 public class CommandLineArgs {
 
 	public static void main(String... args) {
