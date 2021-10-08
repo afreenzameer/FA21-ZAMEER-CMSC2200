@@ -1,16 +1,21 @@
- 
-public class ReverseString
+import java.util.Scanner;
+ class Variable
 {
- public static void main(String[] args)
- {
-	 
- for(int i=args.length-1; i >=0; i--) {
- 	system.out.println(args[i]); 
+	public static void main(String[ ] arg)
+	{
+	String str;
+	char ch;
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a string : ");
+	str=sc.nextLine();	
+	System.out.println("Reverse of a String '"+str+"' is  :"); 
+	for(int j=str.length();j>0;--j)
+	{
+	System.out.print(str.charAt(j-1)); 
 	}
- 
- System.out.println("Reversed string is:");
- System.out.println(reverse + "\n");
- byte b1 = 122;
+
+
+byte b1 = 122;
 short s1 = -30000;
 int i1 = 1;
 long l1 = 500L;
@@ -29,10 +34,6 @@ System.out.println(d1);
 System.out.println(bo1);
 System.out.println(c1);
 System.out.println(str1);
+}
  }
  
-
- 
-
-
-}
