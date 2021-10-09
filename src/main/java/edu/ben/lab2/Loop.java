@@ -7,23 +7,26 @@ public class Loop {
 
     }
 
-    private static int myForLoop(int[] values) {
+    private static int myForLoop(int values) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        for (int values = 5; values > 5; values++) {
+        for (values = 5; values > 5; values++) {
             System.out.println(values);
         }
-
+        return values;
     }
 
-    private static int myEnhancedForLoop(int[] value) {
+    private static int myEnhancedForLoop(int value) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        for (int value : numbers) {
-            if (value % 3 != 0)
+        for (int j : numbers) {
+            if (j % 3 != 0)
                 continue;
-            System.out.println(value);
+            System.out.println(j);
+            return j;
         }
+
+    return value;
     }
 
     private static int myWhileLoop(int[] values) {
@@ -32,6 +35,7 @@ public class Loop {
             System.out.println(i);
             i++;
         }
+        return i;
     }
 
 }
