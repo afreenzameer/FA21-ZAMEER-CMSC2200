@@ -1,0 +1,30 @@
+public static int add(int augend, int addend) {
+return augend + addend;
+}
+
+public static int sum(int...summands) {
+ int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	int sum = 0;
+        for (int x: arr) {
+            sum = add(sum, x);
+}
+            return sum;
+        }
+
+
+
+public static int multiply(int multiplier, int multiplicand) {
+int a = 2
+int b = 6
+return multiplier * multiplicand;
+}
+
+public static int substract(int minuend, int subtrahend) {
+return minuend - subtrahend;
+}
+
+public static int exponentiate(int base, int power) {
+	a = 3;
+        b = 4;
+        System.out.println(Math.pow(a, b));
+}
