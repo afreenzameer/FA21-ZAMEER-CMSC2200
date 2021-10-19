@@ -1,15 +1,6 @@
 package edu.ben.lab3;
 
 public class Math {
-    public static void main(String... args) {
-        System.out.println(add(5, 6));
-        System.out.println(sum(6, 2, 1));
-        System.out.println(multiply(2, 4));
-        System.out.println(subtract(7, 3));
-        System.out.println(exponentiate(3, 3));
-        System.out.println(exponentiate(2, 6));
-
-    }
 
     public static int add(int augend, int addend) {
         return augend + addend;
