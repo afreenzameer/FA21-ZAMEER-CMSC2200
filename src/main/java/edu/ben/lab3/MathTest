@@ -26,17 +26,17 @@ public class MathTest {
 
     @ParameterizedTest
     @MethodSource("provideIntSums")
-    void testSums(int summands, int expected) {
+    void testSums(int[] summands, int expected) {
         assert Math.sum(summands) == expected;
     }
 
     private static Stream<Arguments> provideIntSums() {
         return Stream.of(
-                Arguments.of(72,3,88, 163),
-                Arguments.of(15,93, 108),
-                Arguments.of(2,78, 80),
-                Arguments.of(76,54, 130),
-                Arguments.of(72,21, 93)
+                Arguments.of(new int[]{72, 3, 88}, 163),
+                Arguments.of(new int[]{15,93}, 108),
+                Arguments.of(new int[]{2,78}, 80),
+                Arguments.of(new int[]{76,54}, 130),
+                Arguments.of(new int[]{72,21}, 93)
 
         );
 
@@ -89,3 +89,4 @@ public class MathTest {
                 Arguments.of(12,3, 1728)
         );
     }
+}
