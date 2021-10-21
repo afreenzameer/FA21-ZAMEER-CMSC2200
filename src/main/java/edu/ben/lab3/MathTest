@@ -16,27 +16,27 @@ public class MathTest {
 
     private static Stream<Arguments> provideIntAdd() {
         return Stream.of(
-                Arguments.of("2,3", "5"),
-                Arguments.of("2,29", "31"),
-                Arguments.of("7,42", "49"),
-                Arguments.of("4,2", "6"),
-                Arguments.of("36,3", "39")
+                Arguments.of(2,3,5),
+                Arguments.of(2,29,31),
+                Arguments.of(7,42, 49),
+                Arguments.of(4,2, 6),
+                Arguments.of(36,3, 39)
         );
     }
 
     @ParameterizedTest
     @MethodSource("provideIntSums")
-    void testSums(int[] input, int expected) {
-        assert Math.sum(input) == expected;
+    void testSums(int summands, int expected) {
+        assert Math.sum(summands) == expected;
     }
 
     private static Stream<Arguments> provideIntSums() {
         return Stream.of(
-                Arguments.of("72,3,88", "163"),
-                Arguments.of("15,93", "108"),
-                Arguments.of("2,78", "80"),
-                Arguments.of("76,54", "130"),
-                Arguments.of("72,21", "93")
+                Arguments.of(72,3,88, 163),
+                Arguments.of(15,93, 108),
+                Arguments.of(2,78, 80),
+                Arguments.of(76,54, 130),
+                Arguments.of(72,21, 93)
 
         );
 
@@ -50,11 +50,11 @@ public class MathTest {
 
     private static Stream<Arguments> provideIntMultiply() {
         return Stream.of(
-                Arguments.of("9,1", "9"),
-                Arguments.of("99,87", "8613"),
-                Arguments.of("62,13", "806"),
-                Arguments.of("71,52", "3692"),
-                Arguments.of("63,55", "3465")
+                Arguments.of(9,1, 9),
+                Arguments.of(99,87, 8613),
+                Arguments.of(62,13, 806),
+                Arguments.of(71,52, 3692),
+                Arguments.of(63,55, 3465)
         );
     }
 
@@ -66,11 +66,11 @@ public class MathTest {
 
     private static Stream<Arguments> provideIntSubtract() {
         return Stream.of(
-                Arguments.of("46,83", "-37"),
-                Arguments.of("71,26", "45"),
-                Arguments.of("78,60", "18"),
-                Arguments.of("58,30", "28"),
-                Arguments.of("74,42", "32")
+                Arguments.of(46,83, -37),
+                Arguments.of(71,26, 45),
+                Arguments.of(78,60, 18),
+                Arguments.of(58,30, 28),
+                Arguments.of(74,42, 32)
         );
     }
 
@@ -82,11 +82,10 @@ public class MathTest {
 
     private static Stream<Arguments> provideIntExponentiate() {
         return Stream.of(
-                Arguments.of("2,3", "8"),
-                Arguments.of("1,8", "1"),
-                Arguments.of("8,2", "64"),
-                Arguments.of("7,5", "16807"),
-                Arguments.of("12,3", "1728")
+                Arguments.of(2,3, 8),
+                Arguments.of(1,8, 1),
+                Arguments.of(8,2, 64),
+                Arguments.of(7,5, 16807),
+                Arguments.of(12,3, 1728)
         );
     }
-}
