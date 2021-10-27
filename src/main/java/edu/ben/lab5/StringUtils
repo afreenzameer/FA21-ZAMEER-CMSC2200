@@ -1,1 +1,61 @@
+package edu.ben.lab5;
 
+public class StringUtils {
+    public static void main(String... args) {
+        System.out.println(isEmpty(null));
+        System.out.println(isBlank(null));
+        System.out.println(reverse(null));
+        System.out.println(padSide(null));
+
+    }
+
+
+    public static boolean isEmpty(String phrase) {
+        if (phrase == null || phrase == "") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isBlank(String phrase) {
+        if(isEmpty(String phrase)) {
+            return true;
+        } else if (phrase == "   ") {
+            return "true";
+        } else {
+            return false;
+        }
+    }
+
+    public static String reverse(String phrase) {
+
+        for (int i = args.length - 1; i >= 0; i--) {
+            System.out.println(args[i]);
+        }
+
+    }
+
+    public static String[] reverseAll(String... phrases) {
+
+        for (reverse(null)) {
+        }
+
+    }
+
+
+
+    public static String padSide(char str[])
+    {
+        int i = str.length-1;
+        for (int j = i; j >= 0; j--)
+            if (str[j] != ' ')
+            {
+                char c = str[i];
+                str[i] = str[j];
+                str[j] = c;
+                i--;
+            }
+    }
+
+}
