@@ -1,0 +1,44 @@
+package edu.ben.lab5;
+
+import edu.ben.lab3.Math;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
+public class StringUtilsTest {
+}
+
+    @ParameterizedTest
+    @MethodSource("provideStringIsEmpty")
+    void testisEmpty(String phrase, String expected) {
+        assert StringUtils.isEmpty(phrase, expected) == expected;
+    }
+
+
+    private static Stream<Arguments> provideStringIsEmpty() {
+        return Stream.of(
+                Arguments.of(null, true),
+                Arguments.of("", true),
+                Arguments.of("   ", false),
+                Arguments.of("Hello", false)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideStringIsBlank")
+    void testisBlank(String phrase, String expected) {
+        assert StringUtils.isEmpty(phrase, expected) == expected;
+    }
+
+
+    private static Stream<Arguments> provideStringIsBlank() {
+        return Stream.of(
+                Arguments.of(null, true),
+                Arguments.of("", true),
+                Arguments.of("   ", true),
+                Arguments.of("Hello", false)
+        );
+    }
+}
