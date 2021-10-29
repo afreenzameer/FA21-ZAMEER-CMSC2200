@@ -1,14 +1,6 @@
 package edu.ben.lab5;
 
 public class StringUtils {
-    public static void main(String... args) {
-        System.out.println(isEmpty(null));
-        System.out.println(isBlank(null));
-        System.out.println(reverse(null));
-        System.out.println(padSide(null));
-
-    }
-
 
     public static boolean isEmpty(String phrase) {
         if (phrase == null || phrase == "") {
@@ -19,43 +11,33 @@ public class StringUtils {
     }
 
     public static boolean isBlank(String phrase) {
-        if(isEmpty(String phrase)) {
+        if (isEmpty(phrase)) {
             return true;
-        } else if (phrase == "   ") {
-            return "true";
-        } else {
-            return false;
         }
+        for (char c : phrase.toCharArray()) {
+            System.out.println(c);
+        }
+        return false;
+
     }
 
     public static String reverse(String phrase) {
 
-        for (int i = args.length - 1; i >= 0; i--) {
-            System.out.println(args[i]);
+        String reversedString = "";
+        char[] chars = phrase.toCharArray();
+        for (int c = chars.length - 1; c >= 0; c--) {
+            reversedString += chars[c];
         }
+        return reversedString;
 
     }
 
     public static String[] reverseAll(String... phrases) {
-
-        for (reverse(null)) {
+        String[] reversedAll = new String[phrases.length];
+        for (int i = 0; i < phrases.length; i++) {
+            reversedAll[i] = reverse(phrases[i]);
         }
-
-    }
-
-
-
-    public static String padSide(char str[])
-    {
-        int i = str.length-1;
-        for (int j = i; j >= 0; j--)
-            if (str[j] != ' ')
-            {
-                char c = str[i];
-                str[i] = str[j];
-                str[j] = c;
-                i--;
-            }
+        return reversedAll;
     }
 
 }
