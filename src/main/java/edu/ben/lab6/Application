@@ -1,0 +1,39 @@
+package edu.ben.lab6;
+
+import edu.ben.lab3.Math;
+
+import java.sql.SQLOutput;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Application {
+
+    public static void main(String... args) {
+
+        Scanner input = new Scanner(System.in);
+        boolean running = true;
+        String myInput;
+        while (running) {
+            System.out.print("Enter a command (ADD, SUBTRACT, MULTIPLY, EXPONENTIATE, SUM, REVERSE, EXIT):");
+            myInput = input.next();
+            switch(myInput.toUpperCase()) {
+                case "ADD":
+                    System.out.println("Enter a number");
+                    myInput = input.nextLine();
+                    System.out.println("Enter another number");
+                    myInput = input.nextLine();
+                    System.out.println("The sum of your numbers is" + (Math.add(myInput, myInput)));
+
+                    break;
+                case "EXIT":
+                    running = false;
+                    continue;
+                default:
+                    System.out.println("error");
+                    break;
+
+            }
+            input.close();
+        }
+    }
+}
