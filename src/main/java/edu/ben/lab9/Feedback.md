@@ -1,5 +1,8 @@
 ## Lab 9 Feedback
 
-There is quite a bit missing here but this is a good start. Let me know if you have any confusion about what the lab entails.
+Nice job with this, there are only two minor errors. One, you are not placing the Cars ito an array, you are simply printing them when they are made. 
+Two, your file is hardcoded to the absolute path. When someone runs this on their laptop, they will not have your user route, so the program will break.
 
-## Score: 13 / 25 
+Otherwise, nice job!
+
+## Score: 20 / 25 
